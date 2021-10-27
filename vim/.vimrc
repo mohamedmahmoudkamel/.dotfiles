@@ -32,6 +32,7 @@ Plug 'mbbill/undotree'
 
 call plug#end()
 
+colorscheme gruvbox
 set background=dark
 
 if executable('rg')

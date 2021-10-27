@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 if [[ -z $STOW_FOLDERS ]]; then
-    STOW_FOLDERS="vim"
+    STOW_FOLDERS="vim tmux"
 fi
 
 if [[ -z $DOTFILES ]]; then
@@ -16,9 +16,8 @@ do
 done
 popd
 
-sudo apt-get purge -y vim
+sudo apt-get purge -y vim tmux
 sudo apt-get autoremve
 sudo apt-get autoclean
-rm -rf ~/.vim ~/.vimrc ~/.vim ~/.viminfo
-
+rm -rf ~/.vim ~/.vimrc ~/.vim ~/.viminfo ~/.tmux.conf
 
