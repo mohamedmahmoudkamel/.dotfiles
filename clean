@@ -1,0 +1,24 @@
+#!/usr/bin/env zsh
+
+if [[ -z $STOW_FOLDERS ]]; then
+    STOW_FOLDERS="vim"
+fi
+
+if [[ -z $DOTFILES ]]; then
+    DOTFILES=$HOME/.dotfiles
+fi
+
+pushd $DOTFILES
+for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
+do
+    figlet "UNLINKING $folder"
+    stow -Dt ~ $folder
+done
+popd
+
+sudo apt-get purge -y vim
+sudo apt-get autoremve
+sudo apt-get autoclean
+rm -rf ~/.vim ~/.vimrc ~/.vim ~/.viminfo
+
+
