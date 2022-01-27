@@ -8,11 +8,11 @@ if [[ -z $DOTFILES ]]; then
     DOTFILES=$HOME/.dotfiles
 fi
 
-pushd $DOTFILES
+pushd "$DOTFILES"
 for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
 do
-    figlet "UNLINKING $folder"
-    stow -Dt ~ $folder
+    echo "================== UNLINKING $folder ====================="
+    stow -Dt ~ "$folder"
 done
 popd
 

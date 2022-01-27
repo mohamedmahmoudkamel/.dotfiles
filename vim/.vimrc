@@ -12,6 +12,7 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
+set scrolloff=10
 
 set colorcolumn=80
 set relativenumber
@@ -45,3 +46,7 @@ let g:netrw_banner=0
 let g:netrw_winsize=25
 
 let g:ctrlp_use_caching=0
+
+
+nnoremap J :m '>+1<CR>gv=gv
+nnoremap K :m '>+1<CR>gv=gv
