@@ -1,3 +1,13 @@
 [user]
 	email = m.kamel@dailymealz.com
 	name = Kamel
+
+[alias]
+    update = !git checkout master && \
+        git branch -D development && \
+        git fetch --all --tags --force && \
+        git checkout development && \
+        git branch -D master && \
+        git fetch --all --tags --force && \
+        git checkout master && \
+        git log --oneline --graph master development

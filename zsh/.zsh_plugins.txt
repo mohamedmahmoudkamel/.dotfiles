@@ -4,8 +4,6 @@ mafredri/zsh-async
 robbyrussell/oh-my-zsh path:plugins/gitfast
 robbyrussell/oh-my-zsh path:plugins/colored-man-pages
 
-romkatv/powerlevel10k
-
 zsh-users/zsh-completions
 zsh-users/zsh-autosuggestions
 zsh-users/zsh-syntax-highlighting

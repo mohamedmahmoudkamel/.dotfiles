@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-sudo apt-get install -y git vim figlet tmux zsh
+sudo apt-get install -y git vim figlet tmux zsh stow
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 

@@ -10,9 +10,7 @@ fi
 
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/kamel/.oh-my-zsh"
-
-source $ZSH/oh-my-zsh.sh
+export ZSH="$HOME/.oh-my-zsh"
 
 
 # Antibody
@@ -24,7 +22,7 @@ source ~/.zsh_plugins.sh
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="spaceship"
+ZSH_THEME="spaceship"
 # export SPACESHIP_USER_SHOW=always
 # export SPACESHIP_HOST_SHOW=always
 
@@ -125,7 +123,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 [[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
 
-[ -s "/home/kamel/.jabba/jabba.sh" ] && source "/home/kamel/.jabba/jabba.sh"
+[ -s "$HOME/.jabba/jabba.sh" ] && source "$HOME/.jabba/jabba.sh"
 
 
 export ANDROID_HOME=$HOME/Android/Sdk
@@ -137,4 +135,8 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-alias bat="batcat"
+alias cat="batcat"
+alias wstorm="wstorm . > /dev/null 2>&1 &"
+alias pstorm="pstorm . > /dev/null 2>&1 &"
+
+source $ZSH/oh-my-zsh.sh
